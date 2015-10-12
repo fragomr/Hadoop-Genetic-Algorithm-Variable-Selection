@@ -1,0 +1,3 @@
+# Hadoop-Genetic-Algorithm-Variable-Selection
+
+I have coded Genetic algorithm from scratch in R.It is an implementation of Genetic algorithm on hadoop for Variable selection problem. Given a dataset, a particular combination of variables is coded as 1s (variable present) and 0s (variable absent) thus representing a chromosome. The usual steps are Genetic Algorithm are computed starting from random Initialization of chromosome population, selection of halp the population, crossover, mutation. Given a training and validation datasets, the Genetic algorithm fits a logistic regression model and computes the ROC using the validation dataset. 
