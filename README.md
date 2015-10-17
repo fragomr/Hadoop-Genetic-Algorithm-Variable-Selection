@@ -26,3 +26,5 @@ As outlined above, an initial population is generated before Genetic Algorithm c
 We can see that the Avg fitness of the population keeps increasing (in each iteration) indicating that Genetic Algorithm is successfully working giving rise to populations which are fitter than the previous ones.
 
 The final population thus, would have chromosomes which are generally fitter and have better AUC Vs. Model order tradeoff than Starting population for fitting logistic regression model. As a chromosome corresponds to a particular variable combination, we have used genetic algorithm to select variables for logistic regression.
+
+Now taking this one step further, I have implemented the whole thing on hadoop using mapreduce framework.
