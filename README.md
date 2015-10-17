@@ -21,4 +21,4 @@ So crossover will only hapen 60% of times between 2 randomly selected chromosome
 4.Mutation
 With a probability of 0.005, mutation can occur at random location in the chromosome supplied as argument to mutation function.
 
-As outlined above, an initial population is generated before Genetic Algorithm can begin. Then Genetic algorithm is performed in an iterative fashion: Fitness is calculated for each chromosome. An Avg Population fitness is also calculated equal to total fitness of the population/total size of population.
+As outlined above, an initial population is generated before Genetic Algorithm can begin. Then Genetic algorithm is performed in an iterative fashion: a.A termination condition is checked. If it is met then GA is stopped. The termination condition used here is number of generations (iterations of GA). b.Fitness is calculated for each chromosome. An Avg Population fitness is also calculated equal to total fitness of the population/total size of population. c.Half of the population is selected based on fitness. d.
