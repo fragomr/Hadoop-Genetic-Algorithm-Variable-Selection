@@ -27,5 +27,7 @@ We can see that the Avg fitness of the population keeps increasing (in each iter
 
 The final population thus, would have chromosomes which are generally fitter and have better AUC Vs. Model order tradeoff than Starting population for fitting logistic regression model. As a chromosome corresponds to a particular variable combination, we have used genetic algorithm to select variables for logistic regression.
 
-Now taking this one step further, to leverage the above method for Big data, I have also implemented my method on hadoop using mapreduce framework. There can be various ways to do this as per the paper : http://arxiv.org/pdf/1312.0086.pdf
+The above algorithm is implemented in Genetic_algorithm_local.R
+
+Now taking this one step further, to leverage the above method for Big data, I have also implemented it on hadoop using mapreduce framework. While there can be various ways to do this as per the paper : http://arxiv.org/pdf/1312.0086.pdf,
 I have used mapper for load balancing so that almost equal number of observations are passed to each reducer. Then the whole Genetic algorithm is run within each reducer independently and results are collected as output.
