@@ -7,9 +7,12 @@ The usual steps of Genetic Algorithm are performed starting from random Initiali
 Given a training and validation datasets, the Genetic algorithm fits a logistic regression model and computes the Area under ROC curve using the validation dataset. The fitness function consists of linear combination of the AUC and rewards for smaller number of variables in the chromosome (number of 1s) : Fitness = auc+Rho*(number_of_predictors - model_order)/number_of_predictors), where Rho is the intensity of the reward term.
 
 Steps of Genetic Algorithm
-1.#Initialization of starting population 
+1.Initialization of starting population 
 initializer function randomly initializes 1 and 0 into chromosomes where the total number of chromosomes (population_size) can be supplied by the . This function gives us the initial population (initial models) for the genetic algorithm to begin.
 The population size has to be divisible by 4 as we are going to select exactly half of it and then need to form crossover pairs from this selected half.
 
-2.#Select Parents such that half of the population is selected
+2.Select Parents such that half of the population is selected
+selectParents assigns fitness to each chromosome in the population using the fitness function. Top 2 chromosomes is terms of fitness are always selected. Then (half population - 2) chromsomes are selected with probability of selection proportinal to fitness of chromosome.
+
+3.
 
