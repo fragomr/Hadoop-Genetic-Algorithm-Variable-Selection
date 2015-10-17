@@ -30,4 +30,4 @@ The final population thus, would have chromosomes which are generally fitter and
 The above algorithm is implemented in Genetic_algorithm_local.R
 
 Now taking this one step further, to leverage the above method for Big data, I have also implemented it on hadoop using mapreduce framework. While there can be various ways to do this as per the paper : http://arxiv.org/pdf/1312.0086.pdf,
-I have used mapper for load balancing so that almost equal number of observations are passed to each reducer. Then the whole Genetic algorithm is run within each reducer independently and results are collected as output.
+I have used mapper for load balancing so that almost equal number of observations are passed to each reducer. Then the whole Genetic algorithm is run within each reducer independently and results are collected as output. Load balancing in mapper is achieved by sampling keys for each observation using uniform random sampling. As all observations with same key go to same reducer in Hadoop, due to uniform random sampling, we will be able to uniformly allocate bservations across the reducers.
