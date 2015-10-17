@@ -12,7 +12,11 @@ initializer function randomly initializes 1 and 0 into chromosomes where the tot
 The population size has to be divisible by 4 as we are going to select exactly half of it and then need to form crossover pairs from this selected half.
 
 2.Select Parents such that half of the population is selected
-selectParents assigns fitness to each chromosome in the population using the fitness function. Top 2 chromosomes is terms of fitness are always selected. Then (half population - 2) chromsomes are selected with probability of selection proportinal to fitness of chromosome.
+selectParents assigns fitness to each chromosome in the population using the fitness function. Top 2 chromosomes in terms of fitness are always selected (called as Elitism). Then (half population - 2) chromsomes are selected with probability of selection proportinal to fitness of chromosome.
 
-3.
+3.Crossover
+Crossover function takes 2 chromosomes as arguments and implements crossover at a random location with probability 0.6
+So crossover will only hapen 60% of times between 2 randomly selected chromosomes.
 
+4.Mutation
+With a probability of 0.005, mutation can occur at random location in the chromosome supplied as argument to mutation function.
